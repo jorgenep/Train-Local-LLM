@@ -194,8 +194,7 @@ def train_sft(
 
             print(f"SFT Step {step:2d} | Loss: {loss.item():.4f}")
 
-    sft_checkpoint_path = os.path.join(output_dir, "sft_model
-    .pth")
+    sft_checkpoint_path = os.path.join(output_dir, "sft_model.pth")
     torch.save(model.state_dict(), sft_checkpoint_path)
     print(f"SFT Completed! Saved checkpoint to: {sft_checkpoint_path}")
     return model
