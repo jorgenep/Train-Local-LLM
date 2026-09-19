@@ -46,8 +46,8 @@ A lightweight, high-density Llama-style language model (**~287M parameters**) de
 Clone the repository and activate your Python virtual environment:
 
 ```bash
-git clone https://github.com/your-username/llama-code-287m.git
-cd llama-code-287m
+git clone https://github.com/jorgenep/Train-Local-LLM.git
+cd Train-Local-LLM
 
 python3 -m venv train_env
 source train_env/bin/activate
