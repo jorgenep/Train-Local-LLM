@@ -15,37 +15,37 @@ import numpy as np
 sys.path = ["/workspace/scratch/final_build", "/workspace/scratch", "/workspace/artifacts"] + [p for p in sys.path if p not in ["/workspace/scratch/final_build", "/workspace/scratch", "/workspace/artifacts"]]
 
 try:
-    from model_final import LlamaCodeLM, RMSNorm, SwiGLUFFN, GroupedQueryAttention, apply_rotary_emb, precompute_freqs_cis
+    from model import LlamaCodeLM, RMSNorm, SwiGLUFFN, GroupedQueryAttention, apply_rotary_emb, precompute_freqs_cis
 except ImportError:
     from model import LlamaCodeLM, RMSNorm, SwiGLUFFN, GroupedQueryAttention, apply_rotary_emb, precompute_freqs_cis
 
 try:
-    from train_tokenizer_final import train_custom_bpe_tokenizer
+    from train_tokenizer import train_custom_bpe_tokenizer
 except ImportError:
     from train_tokenizer import train_custom_bpe_tokenizer
 
 try:
-    from prepare_data_final import tokenize_corpus_to_bin, BinaryTokenDataset
+    from prepare_data import tokenize_corpus_to_bin, BinaryTokenDataset
 except ImportError:
     from prepare_data import tokenize_corpus_to_bin, BinaryTokenDataset
 
 try:
-    from train_final import train_model, generate_code
+    from train import train_model, generate_code
 except ImportError:
     from train import train_model, generate_code
 
 try:
-    from sft_train_final import train_sft
+    from sft_train import train_sft
 except ImportError:
     from sft_train import train_sft
 
 try:
-    from eval_humaneval_final import evaluate_model_on_benchmarks
+    from eval_humaneval import evaluate_model_on_benchmarks
 except ImportError:
     from eval_humaneval import evaluate_model_on_benchmarks
 
 try:
-    from chat_final import generate as generate_chat_tokens, get_compute_device
+    from chat import generate as generate_chat_tokens, get_compute_device
 except ImportError:
     from chat import generate as generate_chat_tokens, get_compute_device
 

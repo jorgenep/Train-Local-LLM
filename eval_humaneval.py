@@ -11,7 +11,7 @@ import torch
 from tokenizers import Tokenizer
 
 try:
-    from model_final import LlamaCodeLM
+    from model import LlamaCodeLM
 except ImportError:
     from model import LlamaCodeLM
 

@@ -17,31 +17,31 @@ from datetime import datetime
 PIPELINE_STAGES = [
     {
         "name": "1. Train Custom BPE Tokenizer",
-        "script": "train_tokenizer_final.py",
+        "script": "train_tokenizer.py",
         "args": [],
         "description": "Trains a 16,384 vocabulary Byte-Pair Encoding tokenizer on Python code."
     },
     {
         "name": "2. Prepare Binary Token Dataset",
-        "script": "prepare_data_final.py",
+        "script": "prepare_data.py",
         "args": [],
         "description": "Pre-tokenizes Python code files into a zero-RAM memory-mapped train_data.bin file."
     },
     {
         "name": "3. Base Model Pre-Training",
-        "script": "train_final.py",
+        "script": "train.py",
         "args": [],
         "description": "Pre-trains the ~287M Llama model (24 layers, GQA, RoPE, RMSNorm, SwiGLU) with AMP."
     },
     {
         "name": "4. Supervised Fine-Tuning (SFT)",
-        "script": "sft_train_final.py",
+        "script": "sft_train.py",
         "args": [],
         "description": "Fine-tunes base model on ChatML instruction pairs with masked loss."
     },
     {
         "name": "5. HumanEval Benchmark Evaluation",
-        "script": "eval_humaneval_final.py",
+        "script": "eval_humaneval.py",
         "args": [],
         "description": "Evaluates code generation pass@1 performance in an isolated Python sandbox."
     }

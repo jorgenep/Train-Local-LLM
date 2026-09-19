@@ -15,7 +15,7 @@ from torch.utils.data import Dataset, DataLoader
 from tokenizers import Tokenizer
 
 try:
-    from model_final import LlamaCodeLM
+    from model import LlamaCodeLM
 except ImportError:
     from model import LlamaCodeLM
 
@@ -194,7 +194,8 @@ def train_sft(
 
             print(f"SFT Step {step:2d} | Loss: {loss.item():.4f}")
 
-    sft_checkpoint_path = os.path.join(output_dir, "sft_model_final.pth")
+    sft_checkpoint_path = os.path.join(output_dir, "sft_model
+    .pth")
     torch.save(model.state_dict(), sft_checkpoint_path)
     print(f"SFT Completed! Saved checkpoint to: {sft_checkpoint_path}")
     return model

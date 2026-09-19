@@ -15,12 +15,12 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 
 try:
-    from model_final import LlamaCodeLM
+    from model import LlamaCodeLM
 except ImportError:
     from model import LlamaCodeLM
 
 try:
-    from prepare_data_final import BinaryTokenDataset
+    from prepare_data import BinaryTokenDataset
 except ImportError:
     from prepare_data import BinaryTokenDataset
 
