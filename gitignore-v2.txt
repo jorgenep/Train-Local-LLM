@@ -1,0 +1,23 @@
+# Python environment & cache
+__pycache__/
+*.py[cod]
+*$py.class
+train_env/
+.venv/
+venv/
+
+# Datasets & Memory-mapped binaries
+*.bin
+train_data.bin
+
+# Model Checkpoints & Output Logs
+*.pth
+*.pt
+checkpoints/
+wandb/
+logs/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
